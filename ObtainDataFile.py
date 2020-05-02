@@ -7,10 +7,6 @@
 # In[156]:
 
 
-BenjaminMorganPrivateKeys = {}
-BenjaminMorganPrivateKeys['Quandl'] = 'DKfvdx3RY1J5HgkcEbxH'
-
-
 # ### Necessary Packages
 # - **Numpy**: was not used...may delete later
 # - **Pandas**: primarily used for dataframe structures

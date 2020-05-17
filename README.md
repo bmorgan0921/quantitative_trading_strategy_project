@@ -61,7 +61,7 @@ This is a long-only equity strategy with monthly frequency. The equities for the
 2. gradient boosting, 
 3. LSTM (long short-term memory) 
 
-![Strategy Overview](strategy_overview.png)
+![Strategy Overview](images/strategy_overview.png)
 
 #### Target Variable
 * 0: returns in following month are _negative_
@@ -97,15 +97,15 @@ For example, five daily features would turn in to 15 monthly features (5 feature
 
 One idea was to take a random selection of positions that the strategy lists in the top **20%** -quantile. We observed 100 generated portfolios that all produced similar results, as you can see below. The figure of 100 histograms shows the distribution of their returns with a density line for each chart. 
 
-![Distribution of Portfolio Returns](Distribution_of_portfolio_returns.png)
+![Distribution of Portfolio Returns](images/Distribution_of_portfolio_returns.png)
 
 Each portfolio performed similarly across the months as well. Below, you can see a single histogram with a density line describing the mean returns across all portfolios for each month.
 
-![Distribution of Portfolio Mean Returns](Distribution_of_portfolio_mean_returns.png)
+![Distribution of Portfolio Mean Returns](images/Distribution_of_portfolio_mean_returns.png)
 
 By taking the standard deviation of the monthly PnL across all the portfolios, we can observe the values increasing as time continues, as the figure below shows. 
 
-![Monthly Standard Deviation Line Chart](Monthly_Standard_Deviations_Line_Chart.png)
+![Monthly Standard Deviation Line Chart](images/Monthly_Standard_Deviations_Line_Chart.png)
 
 #### Analysis on Generating Portfolios from Random Equity Selections:
 While the initial thought seemed like a good idea, in reality, the randomly selected equities to populate portfolios showed that there was no outstanding value in randomly selecting from our top performing equities in the top **20%**-quantile. This can easily be viewed in the **Distribution of Portfolio Returns...** figure showing that the portfolios more or less behaved the same over the given time period. 
@@ -127,7 +127,7 @@ While the initial thought seemed like a good idea, in reality, the randomly sele
 # take input of strategy. 
 # total_dict = getStatsAll(results_summary) #using a beta cap of +/- 10.
 ```
-![Portfolio Performance Using Beta Cap of 10](PortfolioPerformanceBetaCap_10.png) ![Portfolio Performance Using Beta Cap 10 Split](PortfolioPerformanceBetaCap_10_Split.png)
+![Portfolio Performance Using Beta Cap of 10](images/PortfolioPerformanceBetaCap_10.png) ![Portfolio Performance Using Beta Cap 10 Split](images/PortfolioPerformanceBetaCap_10_Split.png)
 
 
 *Notice: this analysis is in-sample inference only.*
@@ -159,7 +159,7 @@ While the initial thought seemed like a good idea, in reality, the randomly sele
 # total_dict = getStatsAll(results_summary, beta_plot = True, training_split_value_to_plot=0.3) #using a beta cap of +/- 1. 
 ```
 
-![Portfolio Performance Using Beta Cap of 1](PortfolioPerformanceBetaCap_1.png) ![Portfolio Performance Using Beta Cap of 1 Split](PortfolioPerformanceBetaCap_1_Split.png) ![Portfolio Performance Using Varing Beta Caps](PortfolioPerformanceWithVaryingBetaCaps_3.png)
+![Portfolio Performance Using Beta Cap of 1](images/PortfolioPerformanceBetaCap_1.png) ![Portfolio Performance Using Beta Cap of 1 Split](images/PortfolioPerformanceBetaCap_1_Split.png) ![Portfolio Performance Using Varing Beta Caps](images/PortfolioPerformanceWithVaryingBetaCaps_3.png)
 
 
 
@@ -176,25 +176,25 @@ Regarding the Bottom Figure above:
 * While capping could plausibly improve PnL here, keep in mind that it would also reduce the market-neutrality, which was the point of investing the index in the first place. We do not explore whether market-neutrality was affected here.
 * The optimal stratey identified is when the training size is only 30% of the entire dataset with a beta cap of +/- 1.0. You can see that in the bottom figure below, the *Beta Cap: 1.0* line easily outperforms the others in the same training size group and outperforms the Market, the purple line. These results show that the strategy made smart decisions, did not take too many losses, and capitalized on an increasing Market.
 
-![Portfolio Performance Using Beta Cap of 1 Dataframe](PorfolioPerformanceBetaCap_1_DataFrame.png)
+![Portfolio Performance Using Beta Cap of 1 Dataframe](images/PorfolioPerformanceBetaCap_1_DataFrame.png)
 
 The image above represents the dataframe of strategy results using a beta cap of 1.0. Our best performing strategy, using the training split of 30%, had an **Annualized Return of 18.77%, Annualized Volatility of 27.73%, an Annualized Sharpe of 0.605, a Max Drawdown of 0.167, and an Alpha of 0.014.** Below, you wcan see just how the strategy performs against the market since the start of 2015. The strategy looks promising but we need to stress test to be sure. 
 
-![Portfolio Performance Using Beta Cap of 1 Against the Market](PortfolioPerformanceBetaCap_1_AgainstMarket.png)
+![Portfolio Performance Using Beta Cap of 1 Against the Market](images/PortfolioPerformanceBetaCap_1_AgainstMarket.png)
 
 ### Stress Testing Against Simulated 2008 Performance Compared to Recent Performance Without Sentiment
 
 Since the sentiment data does not go past 2013, we are opting to stress test the strategy by observing the strategy's performance without the sentiment features from 2015 to 2019 and observe the strategy's performance between 2005 and 2010. Then we will compare the differential performance of the annualized market returns and annualized strategy returns between the two time periods.
 
-![Portfolio Performance Using Beta Cap of 1 without Sentiment](PortfolioPerformanceBetaCap_1_withoutSentiment.png)
+![Portfolio Performance Using Beta Cap of 1 without Sentiment](images/PortfolioPerformanceBetaCap_1_withoutSentiment.png)
 
-![Portfolio Performance Using Beta Cap of 1 Dataframe without Sentiment](PorfolioPerformanceBetaCap_1_DataFrame_withoutSentiment.png)
+![Portfolio Performance Using Beta Cap of 1 Dataframe without Sentiment](images/PorfolioPerformanceBetaCap_1_DataFrame_withoutSentiment.png)
 
 The strategy can be observed against the market from 2015 to 2019 in the time period above. Take note that the **Annualized Strategy Return is 2.74% against the Market's Annualized Return of 12.67%.** We will be comparing these along with the other listed metrics to the strategy's performance from 2015 to 2010.  
 
-![Portfolio Performance Using Beta Cap of 1 without Sentiment Stress Test](PortfolioPerformanceBetaCap_1_withoutSentiment_stress.png)
+![Portfolio Performance Using Beta Cap of 1 without Sentiment Stress Test](images/PortfolioPerformanceBetaCap_1_withoutSentiment_stress.png)
 
-![Portfolio Performance Using Beta Cap of 1 Dataframe without Sentiment Stress Test](PorfolioPerformanceBetaCap_1_DataFrame_withoutSentiment_stress.png)
+![Portfolio Performance Using Beta Cap of 1 Dataframe without Sentiment Stress Test](images/PorfolioPerformanceBetaCap_1_DataFrame_withoutSentiment_stress.png)
 
 ### Stress Testing Analysis
 Now taking a look at the performance of the stressed strategy from 2007 through 2010. The strategy does produce a higher **Annualized Strategy Return of 5.09% against the Market's Annualized Return of 0.58%.** We do see a larger max drawdown and a larger portfolio beta on the stressed strategy and this can be expected. It is surprising to see that not only did the strategy perform positively during this period, it beat the market and beat the 2015-2019 period we were comparing it to. 

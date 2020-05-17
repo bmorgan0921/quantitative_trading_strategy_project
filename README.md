@@ -1,4 +1,4 @@
-**Strategists: [Robert Hatem](https://www.linkedin.com/in/robert-e-hatem/ "LinkedIn Profile: Robert Hatem") (12208493) & [Benjamin Morgan](https://www.linkedin.com/in/benjaminmorgan0921/ "LinkedIn Profile: Benjamin Morgan") (12211971)**
+**Strategists: Robert Hatem ([LinkedIn](https://www.linkedin.com/in/robert-e-hatem/), [Github](https://github.com/hatemr)) & Benjamin Morgan ([LinkedIn](https://www.linkedin.com/in/benjaminmorgan0921/) [Github](https://github.com/bmorgan0921))**
 
 ### Motivation Behind Exploring this Strategy:
 

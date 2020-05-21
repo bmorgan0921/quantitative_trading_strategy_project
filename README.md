@@ -2,7 +2,7 @@
 ### Final Project for Regression Analysis & Quantitative Trading Strategies
 
 
-**Strategists: Robert Hatem ([LinkedIn](https://www.linkedin.com/in/robert-e-hatem/), [Github](https://github.com/hatemr)) & Benjamin Morgan ([LinkedIn](https://www.linkedin.com/in/benjaminmorgan0921/) [Github](https://github.com/bmorgan0921))**
+**Strategists: Robert Hatem ([LinkedIn](https://www.linkedin.com/in/robert-e-hatem/), [Github](https://github.com/hatemr)) & Benjamin Morgan ([LinkedIn](https://www.linkedin.com/in/benjaminmorgan0921/), [Github](https://github.com/bmorgan0921))**
 
 ### Motivation Behind Exploring this Strategy:
 
